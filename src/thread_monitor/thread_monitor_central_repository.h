@@ -57,7 +57,7 @@ public:
         ThreadRegistration(std::thread::id threadId,
                            details::ThreadMonitorBase* monitor,
                            std::chrono::system_clock::time_point now) noexcept
-            : threadId(threadId), lastSeenAlive(now), monitor(monitor) {}
+            : lastSeenAlive(now), monitor(monitor), threadId(threadId) {}
     };
 #pragma pack(pop)
 
